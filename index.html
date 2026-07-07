@@ -1,28 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Vibe coding</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Test — Web agency per startup. Siti web su misura, veloci e orientati alla conversione." />
+  <title>Test — Web Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>    
-    <header>
-        asd
-        asd
-        asd
-    </header>
-    <main>
-        <h1 id="title" >Titolo</h1>
-        <button id="btn">Cliccami</button>
-        <h6>sottotitolo</h6> 
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio tempora voluptatem exercitationem aliquam. Quas, neque velit. Fugiat repellendus consequuntur deleniti? Vel iusto laboriosam eum voluptatum aspernatur nostrum placeat in blanditiis velit ab distinctio vero quas, possimus cupiditate impedit excepturi dolore minus cum tempore illum molestias accusantium, odio ad facilis. Voluptate eveniet labore amet, consequuntur atque deserunt esse vero dicta numquam doloribus reprehenderit fuga totam et perspiciatis maiores magni dolor nemo. Molestiae sequi explicabo ipsum nulla distinctio velit neque voluptatem voluptate non corporis soluta a, dignissimos quasi fugiat nostrum ullam. Ipsa rerum delectus id ratione non in, obcaecati ex, aspernatur fuga laudantium voluptatibus voluptate. Laudantium placeat nemo pariatur mollitia aspernatur molestias omnis, velit non accusamus consectetur quos. Ut doloribus totam fugit consequatur corporis aspernatur aut culpa, minima unde suscipit, dolor quis est! Labore, itaque. Culpa, totam repellat aliquam quisquam ipsum animi suscipit voluptatem voluptate molestias vitae rem quas, nihil nostrum quaerat?
-        </p>
-    </main>
-    <footer>
-        Questo è il footer
-    </footer>
-    <script src="main.js"></script>
-    </body>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#hero" class="logo">Test.</a>
+    <ul class="nav-links">
+      <li><a href="#about">Chi siamo</a></li>
+      <li><a href="#services">Servizi</a></li>
+      <li><a href="#contatti">Contatti</a></li>
+    </ul>
+    <a href="#contatti" class="nav-btn">Parliamo →</a>
+    <button class="hamburger" id="hamburger" aria-label="Apri menu" onclick="toggleDrawer()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE DRAWER -->
+  <div class="drawer" id="drawer">
+    <a href="#about"    onclick="closeDrawer()">Chi siamo</a>
+    <a href="#services" onclick="closeDrawer()">Servizi</a>
+    <a href="#contatti" onclick="closeDrawer()">Contatti</a>
+    <a href="#contatti" class="drawer-cta" onclick="closeDrawer()">Parliamo del tuo progetto →</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <p class="hero-label">Web Agency — Roma &nbsp;·&nbsp; Specializzati in Startup</p>
+    <h1>
+      Il digitale<br>
+      che fa <span class="outline">crescere</span><br>
+      le startup.
+    </h1>
+    <div class="hero-footer">
+      <p class="hero-sub">Progettiamo e sviluppiamo siti web su misura per startup che vogliono fare una prima impressione che converte.</p>
+      <a href="#contatti" class="hero-cta">
+        Parliamo del tuo progetto
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 8h10M9 4l4 4-4 4"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <p class="eyebrow">Chi siamo</p>
+    <h2 class="reveal">Costruiamo siti<br>che lavorano per te.</h2>
+    <div class="about-grid">
+      <div class="about-text reveal reveal-d1">
+        <p>Test è una web agency nata per servire startup. Sappiamo che il tempo è il tuo asset più prezioso, che ogni pagina è una promessa al tuo utente, e che il lancio non aspetta.</p>
+        <p>Lavoriamo in modo diretto, senza strati burocratici. Ascoltiamo il tuo prodotto, definiamo gli obiettivi, costruiamo. Niente di superfluo, tutto di necessario.</p>
+      </div>
+      <div class="about-pillars reveal reveal-d2">
+        <div class="pillar">
+          <span class="pillar-num">—</span>
+          <div>
+            <h3>Su misura, sempre</h3>
+            <p>Nessun template. Ogni sito è progettato da zero attorno alla tua idea e al tuo mercato di riferimento.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-num">—</span>
+          <div>
+            <h3>Velocità di esecuzione</h3>
+            <p>Capire le dinamiche early-stage significa rispettare le scadenze. Timeline chiare, deliverable puntuali.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-num">—</span>
+          <div>
+            <h3>Orientati ai risultati</h3>
+            <p>Un sito non è un oggetto d'arte. È uno strumento. Lo costruiamo perché porti utenti, lead e fiducia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <p class="eyebrow">Servizi</p>
+    <h2 class="reveal">Cosa facciamo.</h2>
+    <div class="services-list">
+
+      <div class="service-row reveal reveal-d1">
+        <h3>Sviluppo<br>siti web</h3>
+        <p>Siti custom per startup — dalla landing page di lancio al sito vetrina completo. HTML5, CSS3, JavaScript puro oppure CMS su richiesta. Performance elevata, responsive, UX orientata alla conversione. Niente bloat, codice pulito.</p>
+        <div class="service-tags">
+          <span class="s-tag">HTML5</span>
+          <span class="s-tag">CSS3</span>
+          <span class="s-tag">JavaScript</span>
+          <span class="s-tag">CMS</span>
+          <span class="s-tag">Responsive</span>
+        </div>
+      </div>
+
+      <div class="service-row reveal reveal-d2">
+        <h3>UI / UX<br>Design</h3>
+        <p>Interfacce chiare, flussi intuitivi. Progettiamo l'esperienza prima del codice — wireframe, prototipo, design system — così il prodotto finale è coerente dalla prima all'ultima pagina.</p>
+        <div class="service-tags">
+          <span class="s-tag">Wireframe</span>
+          <span class="s-tag">Prototipo</span>
+          <span class="s-tag">Figma</span>
+          <span class="s-tag">Design System</span>
+        </div>
+      </div>
+
+      <div class="service-row reveal reveal-d3">
+        <h3>Performance<br>&amp; Manutenzione</h3>
+        <p>Il lancio è solo l'inizio. Ottimizziamo i Core Web Vitals, monitoriamo il sito e interveniamo velocemente quando serve. Il tuo sito rimane veloce, sicuro e aggiornato nel tempo.</p>
+        <div class="service-tags">
+          <span class="s-tag">Core Web Vitals</span>
+          <span class="s-tag">SEO tecnico</span>
+          <span class="s-tag">Sicurezza</span>
+          <span class="s-tag">Aggiornamenti</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contatti">
+    <p class="eyebrow">Contatti</p>
+    <h2 class="reveal">Parliamo.</h2>
+    <div class="contact-grid">
+      <div class="contact-intro reveal reveal-d1">
+        <p>Hai un'idea, stai per lanciare, o vuoi semplicemente capire cosa possiamo fare insieme. Scrivici — rispondiamo entro 24 ore.</p>
+        <div class="contact-detail">
+          <div class="c-item">
+            <span class="c-label">Email</span>
+            <span class="c-value">info@testagency.it</span>
+          </div>
+          <div class="c-item">
+            <span class="c-label">Telefono</span>
+            <span class="c-value">+39 06 000 0000</span>
+          </div>
+          <div class="c-item">
+            <span class="c-label">Sede</span>
+            <span class="c-value">Roma, Italia</span>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form reveal reveal-d2" id="contactForm" onsubmit="handleSubmit(event)" novalidate>
+        <div class="f-row">
+          <div class="f-group">
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" placeholder="Mario Rossi" required />
+          </div>
+          <div class="f-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="mario@startup.it" required />
+          </div>
+        </div>
+        <div class="f-group">
+          <label for="message">Messaggio</label>
+          <textarea id="message" name="message" placeholder="Raccontaci il tuo progetto in poche righe…" required></textarea>
+        </div>
+        <button type="submit" class="f-submit" id="submitBtn">
+          Invia messaggio
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 7h10M8 3l4 4-4 4"/>
+          </svg>
+        </button>
+        <p class="f-note" id="formNote"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-logo">Test.</span>
+    <p>© 2025 Test Web Agency — Roma</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
 </html>
